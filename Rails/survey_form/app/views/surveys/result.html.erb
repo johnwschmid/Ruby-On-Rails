@@ -1,0 +1,11 @@
+<h2>Submitted Information:</h2>
+<p>Name: <%= @view.name %> </p>
+<p>Dojo Location: <%= @view.dojo %> </p>
+<p>Fav. Language: <%= @view.lang %> </p>
+<p>Comment: <%= @view.comment %> </p>
+
+<h5>You have submitted this form <%= session[:visits] %> times.</h5>
+
+<form action="/index" method="get">
+	<button>Go Back</button>
+</form>
