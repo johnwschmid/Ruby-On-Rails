@@ -1,0 +1,17 @@
+<h2>Show User</h2>
+
+<table width="45%">
+	<tr>
+		<th>First Name:</th>
+		<th>Last Name:</th>
+		<th>Email:</th>
+	</tr>
+	<tr>
+		<td><%= @user.first_name %></td>
+		<td><%= @user.last_name %></td>
+		<td><%= @user.email %></td>
+	</tr>
+</table><br>
+<a href="/users/<%= @user.id %>/edit">Edit</a>
+<hr>
+<a href="/">Home</a>

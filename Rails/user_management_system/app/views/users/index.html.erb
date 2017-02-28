@@ -1,0 +1,34 @@
+<h2>User List</h2>
+
+<div id="notice"> <%= flash[:notice] %> </div><br>
+
+<table width="45%">
+	<tr>
+		<th>First Name:</th>
+		<th>Last Name:</th>
+		<th>Email:</th>
+		<th>Options:</th>
+	</tr>
+	<% @user.each do |i| %>
+	<tr>
+		<td><%= i.first_name %></td>
+		<td><%= i.last_name %></td>
+		<td><%= i.email %></td>
+		<td>
+			<a href="/users/<%= i.id %>/edit">Edit</a>  
+			<a href="/users/<%= i.id %>/">Show</a>
+			<form action="/users/<%= i.id %>" method="post">
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			    <input type="hidden" name="_method" value="delete">
+				<button>Delete</button>
+			</form>
+		</td>
+	</tr>
+	<% end %>
+</table>
+<br>
+
+<form action="/users/new" method="get">
+	<button>New User</button>
+</form>
+<br>
