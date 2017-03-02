@@ -1,0 +1,13 @@
+<h1>Edit Product Info</h1>
+
+<%= simple_form_for @product, url: { :action => "update" } do |f| %>
+	<%= f.association :category, label: 'Category:' %><br>
+	<%= f.input :name, label: 'Product Name:' %><br>
+	<%= f.input :description, label: 'Description:' %><br>
+	<%= f.input :pricing, label: 'Price:' %><br>
+	<%= f.button :submit %>
+<% end %>
+<hr>
+<form action="/" method="get">
+	<button>Home</button>
+</form>

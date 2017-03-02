@@ -1,0 +1,17 @@
+<h2>All Comments:</h2>
+
+<table width="70%">
+	<tr>
+		<th>Product:</th>
+		<th>Comment:</th>
+	</tr>
+	<% @comment.each do |i| %>
+	<tr>
+		<td><%= i.product.name %></td>
+		<td><%= i.comment %></td>
+	</tr>
+	<% end %>
+</table><br>
+<form action="/" method="get">
+	<button>Home</button>
+</form>
